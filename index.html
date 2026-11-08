@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warung Dekat - Morowali</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f6f6f6;margin:0;padding:0}
+header{background:#16a34a;color:white;padding:20px;text-align:center}
+header h1{margin:0}header p{margin:5px 0 0}
+.search{padding:15px;background:white;margin:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.search input{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:16px;box-sizing:border-box}
+.list{padding:0 15px 20px;display:grid;gap:12px}
+.card{background:white;padding:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card h3{margin:0 0 5px}.card p{margin:3px 0;color:#555;font-size:14px}
+.badge{background:#dcfce7;color:#166534;padding:3px 8px;border-radius:20px;font-size:12px}
+.btn{display:inline-block;margin-top:10px;background:#16a34a;color:white;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:bold}
+footer{text-align:center;padding:15px;color:#888;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>🛒 Warung Dekat</h1>
+<p>Cari warung terdekat di Morowali</p>
+</header>
+
+<div class="search">
+<input type="text" id="cari" placeholder="Cari warung, sembako, pulsa, sayur..." onkeyup="filter()">
+</div>
+
+<div class="list" id="list">
+<div class="card"><h3>Warung Bu Ani <span class="badge">Buka • 200m</span></h3><p>📍 Jl. Poros Bungku, Morowali</p><p>🍚 Sembako, Beras, Minyak, Telur</p><p>⭐ 4.8 • Buka 06.00 - 21.00</p><a class="btn" href="https://wa.me/6281234567890">Chat WA</a></div>
+<div class="card"><h3>Warung Berkah Jaya <span class="badge">Buka • 500m</span></h3><p>📍 Bahodopi, Morowali</p><p>🥦 Sayur, Ikan, Buah Segar</p><p>⭐ 4.7 • Buka 05.30 - 20.00</p><a class="btn" href="https://wa.me/6281234567890">Chat WA</a></div>
+<div class="card"><h3>Toko Pulsa & Sembako Andi <span class="badge">Buka • 800m</span></h3><p>📍 Bungku Tengah, Morowali</p><p>📱 Pulsa, Kuota, Token Listrik, Sembako</p><p>⭐ 4.9 • Buka 07.00 - 22.00</p><a class="btn" href="https://wa.me/6281234567890">Chat WA</a></div>
+<div class="card"><h3>Warung Makan Sederhana <span class="badge">Buka • 1.1 km</span></h3><p>📍 Jl. Trans Sulawesi, Morowali</p><p>🍛 Nasi Kuning, Nasi Campur, Es Teh</p><p>⭐ 4.6 • Buka 06.00 - 20.00</p><a class="btn" href="https://wa.me/6281234567890">Chat WA</a></div>
+</div>
+
+<footer>Warung Dekat © 2026 - Morowali, Sulawesi Tengah</footer>
+<script>
+function filter(){
+let q=document.getElementById('cari').value.toLowerCase();
+let cards=document.querySelectorAll('.card');
+cards.forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none'});
+}
+</script>
+</body>
+</html>
